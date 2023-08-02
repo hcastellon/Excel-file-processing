@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<!-- ENCABEZADO DEL SITIO -->
+<head>
+
+<!-- Imprime el título -->
+<title>UNAN-Managua | Utilidades</title>
+
+<!-- Imprime el favicon -->
+<link rel="icon" href="/img/favicon.ico">
+
+<!-- Responsive Display -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Boostrap 3.3.7 | https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip -->
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/static/css/main.css">
+
+<!-- JQuery 3.1.1 -->
+<script src="js/jquery-3.2.1.min.js"></script>
+
+<!-- Google reCAPTCHA -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<!-- Scripts -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</head>
+<!-- FIN ENCABEZADO DEL SITIO -->
+<!-- CUERPO DE ETIQUETA DE APERTURA -->
+<body>
+<div role="main" class="container login-container">
+	<div class="row">
+		<div class="col-lg-12">
+
+			<!-- ENCABEZADO DE LA PAGINA -->
+			<div class="col-lg-12">
+				<center>
+					<img class="sitelogo" src="/static/img/logo_dedv_txt_fc.png" onClick="document.location.href='index.php'" />
+					<h2 class="sitename">Aplicación de Procesamiento de Archivos</h2>
+					<hr>
+				</center>
+			</div>
+			<!-- FIN ENCABEZADO DE LA PAGINA -->
+
+			<div class="col-lg-4 col-lg-offset-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<div class="text-center">
+							<h3 class="text-center">Aplicación de Procesamiento de Archivos</h3>
+							<div class="panel-body">
+								<form id="login-form" name="login-form" method="post"  action="/procesar" enctype="multipart/form-data">
+									<fieldset>
+										<div class="form-group text-left">
+											<label for="user" class="sr-only">Usuario</label>
+											<div class="input-group">
+												<span class="input-group-addon">
+												<span class="glyphicon glyphicon-file"></span>
+												</span>
+												<input id="archivo" name="archivo" class="form-control" placeholder="Archivo" autofocus type="file" accept=".xlsx" required>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<input class="btn btn-lg btn-primary btn-block" type="submit" value="Procesar" />
+										</div>
+
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- PIE DE PAGINA -->
+			<div class="col-lg-12">
+				<center class="login-footer">
+					<p>Copyright © 2023						<a href="http://www.unan.edu.ni">UNAN-Managua</a>
+						| Dirección de Educación a Distancia Virtual</p>
+				</center>
+			</div>
+			<!-- FIN PIE DE PAGINA -->
+
+		</div>
+	</div>
+</div>
+</body>
+<!-- FIN CUERPO DE ETIQUETA DE APERTURA -->
+
+</html>
+
+

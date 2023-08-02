@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado del Procesamiento</title>
+    <!-- Vincular el archivo bootstrap.min.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- Vincular tu archivo CSS personalizado si es necesario -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4">Resultado del Procesamiento</h1>
+        <div class="alert alert-success" role="alert">
+            {{ mensaje }}
+        </div>
+        <p>Haz clic en el botón para descargar el archivo procesado:</p>
+        <a href="{{ ruta_descarga }}" download class="btn btn-primary">Descargar archivo</a>
+    </div>
+</body>
+</html>

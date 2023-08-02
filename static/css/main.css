@@ -1,0 +1,426 @@
+/* COLORES */
+/* #EBD776 #eedd8a #F2E6A9 | Amarillo
+	#923031 #c6535e | Rojo
+	#145e8c #3888B9 | Azul
+	#397831 #578E51 | Verde
+*/
+
+/* Fondo */
+html {
+	background-color: #FFF;
+}
+/* Fuentes */
+html,
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+/* HipervÃ­nculos */
+a:link,
+a:visited {
+	color: #0097BB;
+	text-decoration: none;
+}
+a:hover {
+	color: #F87911;
+}
+/* Encabezado */
+header {
+	background-color: #145e8c;
+	color: #FFF;
+	height: 100px;
+}
+	header .logo {
+		padding-top: 15px;
+		padding-left: 15px;
+		padding-bottom: 0;
+		padding-right: 0;
+	}
+		header .logo .sitelogo {
+			width: auto;
+			height: 80px;
+		}
+/* Barra de MenÃº */ 
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #eedd8a;
+	border: none;
+}
+	.navbar-brand img
+	{
+		max-height: 180%;
+		width: auto;
+		padding: 0;
+		margin: -8px 0 0 10px;
+	}
+	.navbar-nav > li > a,
+	.dropdown-menu > li > a,
+	a.navbar-brand {
+		color: #145e8c;
+	}
+		.navbar-nav > li > a:hover,
+		.nav .open > a,
+		.nav .open > a:focus,
+		.nav .open > a:hover,
+		.dropdown-menu > li > a:focus,
+		.dropdown-menu > li > a:hover,
+		.navbar-toggle:focus,
+		.navbar-toggle:hover {
+			color: #397831;
+			background-color: #F2E6A9;
+		}
+			.navbar-nav .picture-user {
+				/*max-width: 35px;
+				max-height: 35px;
+				border-radius: 50% !important;
+				padding: 10px;*/
+			}
+			.navbar-nav > li > .dropdown-menu {
+				background-color: #EBD776;
+			}
+	.navbar .navbar-toggle {
+		border-color: none;
+	}
+		.navbar .navbar-toggle .icon-bar {
+			background-color: #145e8c;
+		}
+/* Contenido Principal */
+.container {
+	min-height: 100vh;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.login-container {
+	background-color: #f3f3f4;
+}
+/* Laterales */
+.sidenav {
+	padding-top: 20px;
+	background-color: #f1f1f1;
+	height: 100%;
+}
+/* Pie de PÃ¡gina */
+footer.basic-footer {
+	background-color: #145e8c;
+	color: white;
+	height: auto;
+	padding-top: 15px;
+}
+footer.basic-footer a:link,
+footer.basic-footer a:visited {
+	color: #eedd8a;
+}
+footer.basic-footer a:hover {
+	color: #bee1e5;
+}
+/* ValidaciÃ³n de Formularios */
+form input[type="text"]:focus:required,
+form input[type="text"]:focus:invalid,
+form input[type="checkbox"]:focus:required,
+form input[type="checkbox"]:focus:invalid,
+form input[type="date"]:focus:required,
+form input[type="date"]:focus:invalid,
+form input[type="datetime-local"]:focus:required,
+form input[type="datetime-local"]:focus:invalid,
+form input[type="email"]:focus:required,
+form input[type="email"]:focus:invalid,
+form input[type="file"]:focus:required,
+form input[type="file"]:focus:invalid,
+form input[type="number"]:focus:required,
+form input[type="number"]:focus:invalid,
+form input[type="password"]:focus:required,
+form input[type="password"]:focus:invalid,
+form input[type="radio"]:focus:required,
+form input[type="radio"]:focus:invalid,
+form input[type="tel"]:focus:required,
+form input[type="tel"]:focus:invalid,
+form input[type="url"]:focus:required,
+form input[type="url"]:focus:invalid,
+form select:focus:required,
+form select:focus:invalid,
+form textarea :focus:required,
+form textarea :focus:invalid {
+	border-color: #c6535e;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(198, 83, 94, 0.6);
+	outline: 0 none;
+}
+form input[type="text"]:focus:valid,
+form input[type="checkbox"]:focus:valid,
+form input[type="date"]:focus:valid,
+form input[type="datetime-local"]:focus:valid,
+form input[type="email"]:focus:valid,
+form input[type="file"]:focus:valid,
+form input[type="number"]:focus:valid,
+form input[type="password"]:focus:valid,
+form input[type="radio"]:focus:valid,
+form input[type="tel"]:focus:valid,
+form input[type="url"]:focus:valid,
+form select:focus:valid,
+form textarea:focus:valid {
+	border-color: #66afe9;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+	outline: 0 none;
+}
+.require {
+	color: #FF0000;
+}
+/* Login */
+.login-container .sitelogo,
+.maintenance-container .sitelogo,
+.recovery-request-container .sitelogo,
+.recovery-container .sitelogo {
+	padding: 5% 0 15px;
+	width: 85%;
+	height: auto;
+}
+.login-container .sitename,
+.recovery-container .sitename,
+.recovery-request-container .sitename,
+.maintenance-container .sitename {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+}
+.login-container .form-signin {
+	background-color: #FFF;
+	border-radius: 5px;
+	box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px 45px 30px;	
+}
+	.login-container hr,
+	.recovery-container hr,
+	.recovery-request-container hr,
+	.maintenance-container hr {
+		width: 50%;
+		border-color: #fff;
+	}
+	.form-signin .form-signin-heading {
+		padding-bottom: 20px
+	}
+	.form-signin .input-group {
+		margin-bottom: 15px;
+	}
+	.form-signin input[type="submit"] {
+		margin: 20px 0 0;
+		font-size: 20px;
+		width: 100%;
+	}
+	.form-signin .forget-pass {
+		text-align: center;
+		padding-top: 20px;
+		cursor: pointer;
+	}
+.login-container .login-footer,
+.recovery-container .recovery-footer,
+.recovery-request-container .recovery-request-footer,
+.maintenance-container .maintenance-footer {
+	color: #737373;
+}
+/* InscripciÃ³n */
+.form-inscription fieldset,
+.form-profile fieldset,
+.form-password fieldset {
+	margin: 30px 0;
+}
+	#first-name,
+	#second-name,
+	#first-last-name,
+	#second-last-name {
+		text-transform: capitalize;
+	}
+	/*.picture-profile,
+	.picture-dni {
+		background-color: #fff;
+		border: 1px solid #ddd;
+		border-radius: 5px;
+		display: block;
+		line-height: 1;
+		margin-bottom: 20px;
+		padding: 3px;
+		transition: border 0.2s ease-in-out 0s;
+	}*/
+	.picture-profile {
+		width: 113px;
+		height: 151px;
+		/*border: 2px solid #f2f2f2;
+		margin-bottom: 10px;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);*/		
+	}
+	.picture-dni,
+	.picture-dni-2 {
+		max-width: auto;
+		height: 151px;
+		/*border: 2px solid #f2f2f2;
+		margin-bottom: 10px;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);*/
+	}
+	.upload-profile-image,
+	.upload-dni-image,
+	.upload-certificate {
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		padding: 5px 10px;
+		width: 100%;
+	}
+	.custom-label {
+		color: #737373;
+		margin-bottom: 10px;
+		margin-top: 5px;
+	}
+	.help-tip {
+		color: #3888B9;
+		cursor: pointer;
+	}
+	#btn-update-info {
+		border-top: 1px solid #e5e5e5;
+		padding: 30px 0 0;
+		text-align: center;
+	}
+	#change-pass {
+		margin-top: 25px;
+	}
+/* Asignaturas */
+#topic {
+	padding-top: 20px;	
+}
+.topic-picture {
+	width: 60%;
+	height: auto;
+}
+.topic-name {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+/* Mis Cursos */
+th {
+	/*text-align: center;*/
+	background-color: #c6535e;
+	color: #FFF;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-align: center;
+}
+td {
+	text-align: justify;
+}
+	td a.btn {
+		color: #FFF;
+	}
+tbody:hover td[rowspan],
+tbody:hover td[colspan],
+tr:hover td {
+	background-color: #d9edf7;
+	color: #333;
+}
+.no-data {
+	font-size: 10px;
+	color: #636363;
+	text-align: center;
+	text-transform: uppercase;
+}
+.no-content {
+	color: #636363;	
+	text-transform: uppercase;
+}
+/* Certificados */
+a.certificate-thumbnail img:hover {
+	border: thick solid #145e8c;
+	opacity: 0.6;
+}
+#downloadCertificate {
+	margin-bottom: 10px;
+}
+/* Sitio en Mantenimiento */
+.maintenance-container {
+	background-color: #f3f3f4;
+}
+	.maintenance-container article {
+		display: block;
+		width: 60%;
+		margin: 0 auto;
+		padding: 3% 0 5%;
+	}
+		.maintenance-container h1 {
+			font-size: 40px;
+			font-weight: bold;
+		}
+		.maintenance-container p {
+			font-size: 18px;
+		}
+		.maintenance-footer p {
+			font-size: 14px;
+		}
+/* Recuperar contraseÃ±a */
+.recovery-container,
+.recovery-request-container {
+	background-color: #f3f3f4;
+}
+	.recovery-request-container .glyphicon-lock {
+		font-size: 50px;
+	}
+/* Preguntas Frecuentes */
+hr.simple{
+	border-top: 1px dashed #eee;
+}
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media (min-width: 768px) {
+.container {
+	min-height: 100vh;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.login-container .sitelogo,
+.maintenance-container .sitelogo,
+.recovery-request-container .sitelogo,
+.recovery-container .sitelogo  {
+	width: 45%;
+}
+.login-container .form-signin {
+	margin: 0 20%;
+}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+.container {
+	min-height: 100vh;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.login-container .sitelogo,
+.maintenance-container .sitelogo,
+.recovery-request-container .sitelogo,
+.recovery-container .sitelogo {
+	width: 35%;
+}
+.login-container .form-signin {
+	margin: 0 25%;
+}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+.container {
+	min-height: 100vh;
+	width: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.login-container .sitelogo,
+.maintenance-container .sitelogo,
+.recovery-request-container .sitelogo,
+.recovery-container .sitelogo  {
+	width: 25%;
+}
+.login-container .form-signin {
+	margin: 0 35%;
+}
+}
+@media screen and (max-width: 767px) {
+.sidenav {
+	height: auto;
+	padding: 15px;
+}
+}
