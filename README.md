@@ -26,11 +26,10 @@ This repository contains a Python application that provides a user-friendly inte
 ## Dependencies:
 
 - Flask: A web framework to create the web-based user interface.
-- Tkinter: The GUI library for the desktop application.
 - Pandas: Used for data manipulation and working with Excel files.
 - XlsxWriter: Required for Excel writing functionality.
 
-This application offers an efficient solution for processing Excel data, making it suitable for data cleaning and manipulation tasks. It combines the convenience of a web app with the flexibility of a desktop application, enhancing the user experience and simplifying data processing workflows.
+This application offers an efficient solution for processing Excel data, making it suitable for data cleaning and manipulation tasks. It combines the convenience of a web app enhancing the user experience and simplifying data processing workflows.
 
 Feel free to fork and contribute to this open-source project! Happy data processing!
 
