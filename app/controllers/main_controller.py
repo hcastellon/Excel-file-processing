@@ -1,36 +1,41 @@
 import pandas as pd
 import re
 
-
 class ControladorPrincipal:
     def __init__(self):
         pass
 
     def procesar_archivo(self, df):
+        # Read the Excel file with specific column names
         df = pd.read_excel(df, header=None, names=["Nombres completos", "Correos electrónicos", "celular"])
-        # Dividir el campo "Nombres completos" en "nombre1", "nombre2", "apellido1" y "apellido2"
-        df[["nombre1", "nombre2", "apellido1", "apellido2"]] = df["Nombres completos"].str.split(" ", n=3, expand=True)
-        # Eliminar el campo "Nombres completos"
-        df = df.drop(columns=["Nombres completos"])
-        # Eliminar los registros que no tienen correo electrónico o celular
-        df = df.dropna(subset=["Correos electrónicos", "celular"], how="all")
-        # Aplicar formato al campo celular removiendo caracteres no numéricos
-        df["celular"] = df["celular"].apply(lambda x: re.sub(r"\D", "", str(x)))
-        # Crear la columna "ID" con el string "(UUID()," para cada registro
-        df["ID"] = "(UUID()"
-        # Crear la columna "IsStudent" con el valor "0" para cada registro
-        df["IsStudent"] = "0"
-        # Verificar si los campos nombre1, nombre2, apellido1 y apellido2 están como "None" y reemplazarlos por ""
-        df["nombre1"] = df["nombre1"].apply(lambda x: "" if x == "None" else x)
-        df["nombre2"] = df["nombre2"].apply(lambda x: "" if x == "None" else x)
-        df["apellido1"] = df["apellido1"].apply(lambda x: "" if x == "None" else x)
-        df["apellido2"] = df["apellido2"].apply(lambda x: "" if x == "None" else x)
 
+        # Split the "Nombres completos" column into "nombre1", "nombre2", "apellido1", and "apellido2"
+        df[["nombre1", "nombre2", "apellido1", "apellido2"]] = df["Nombres completos"].str.split(" ", n=3, expand=True)
+
+        # Remove the "Nombres completos" column
+        df.drop(columns=["Nombres completos"], inplace=True)
+
+        # Drop rows with missing email or cellphone values
+        df.dropna(subset=["Correos electrónicos", "celular"], how="all", inplace=True)
+
+        # Format the "celular" field by removing non-numeric characters
+        df["celular"] = df["celular"].apply(lambda x: re.sub(r"\D", "", str(x)))
+
+        # Create the "ID" column with the string "(UUID()" for each row
+        df["ID"] = "(UUID()"
+
+        # Create the "IsStudent" column with the value "0" for each row
+        df["IsStudent"] = "0"
+
+        # Replace "None" values in "nombre1", "nombre2", "apellido1", and "apellido2" with empty strings
+        df[["nombre1", "nombre2", "apellido1", "apellido2"]] = df[["nombre1", "nombre2", "apellido1", "apellido2"]].fillna("")
+
+        # Prepare two DataFrames with specific column orders
         df1 = df[["nombre1", "nombre2", "apellido1", "apellido2", "Correos electrónicos", "celular"]]
-        # Agregar comillas dobles y una coma a los valores de los campos
-        df = df.applymap(lambda x: f'"{x}",')
-        # Reordenar las columnas
         df2 = df[["ID", "nombre1", "nombre2", "apellido1", "apellido2", "Correos electrónicos", "celular", "IsStudent"]]
 
-        # Devolver el DataFrame procesado u otro resultado deseado
+        # Apply quotation marks and a comma to the values of all columns
+        df1 = df.applymap(lambda x: f'"{x}",')
+
+        # Return the processed DataFrames or any other desired result
         return df1, df2
