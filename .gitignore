@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+package-lock.json
+package.json
+node_modules/
+
 # Distribution / packaging
 .Python
 .idea/
