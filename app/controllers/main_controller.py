@@ -1,11 +1,14 @@
 import pandas as pd
 import re
 
+from typing import Tuple
+
+
 class ControladorPrincipal:
     def __init__(self):
         pass
 
-    def procesar_archivo(self, df):
+    def procesar_archivo(self, df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
         # Read the Excel file with specific column names
         df = pd.read_excel(df, header=None, names=["Nombres completos", "Correos electrónicos", "celular"])
 
@@ -28,14 +31,15 @@ class ControladorPrincipal:
         df["IsStudent"] = "0"
 
         # Replace "None" values in "nombre1", "nombre2", "apellido1", and "apellido2" with empty strings
-        df[["nombre1", "nombre2", "apellido1", "apellido2"]] = df[["nombre1", "nombre2", "apellido1", "apellido2"]].fillna("")
+        df[["nombre1", "nombre2", "apellido1", "apellido2"]] = df[
+            ["nombre1", "nombre2", "apellido1", "apellido2"]].fillna("")
 
         # Prepare two DataFrames with specific column orders
         df1 = df[["nombre1", "nombre2", "apellido1", "apellido2", "Correos electrónicos", "celular"]]
         df2 = df[["ID", "nombre1", "nombre2", "apellido1", "apellido2", "Correos electrónicos", "celular", "IsStudent"]]
 
         # Apply quotation marks and a comma to the values of all columns
-        df1 = df.applymap(lambda x: f'"{x}",')
+        df2 = df.applymap(lambda x: f'"{x}",')
 
         # Return the processed DataFrames or any other desired result
         return df1, df2
